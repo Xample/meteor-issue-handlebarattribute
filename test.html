@@ -1,0 +1,19 @@
+<head>
+  <title>test</title>
+</head>
+
+<body>
+  {{>cards}}
+</body>
+
+<template name="cards">
+	{{#each myCards}}
+		{{>card}}
+    {{/each}}
+</template>
+
+<template name="card">
+    <div class="{{#if isSelected}}selectedClass{{/if}}">
+        {{#if isSelected}}selectedContent{{/if}}
+    </div>
+</template>
